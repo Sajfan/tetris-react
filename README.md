@@ -1,8 +1,6 @@
 # tetris-react
 
-![Build Status](https://github.com/Sajfan/tetris-react/workflows/.github/workflows/test.yml/badge.svg)
-
-> Embed a game of Tetris in your React app
+> Tetris Game in your React app
 
 ```shell
 $ npm install --save tetris-react
