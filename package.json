@@ -1,11 +1,12 @@
 {
-  "name": "react-tetris",
+  "name": "tetris-react",
   "version": "1.0.0",
-  "description": "Embed a game of Tetris in your React app",
+  "description": "Game of Tetris in your React app",
+  "private": false,
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sajfan/react-tetris"
+    "url": "https://github.com/Sajfan/tetris-react"
   },
   "dependencies": {
     "keymaster": "1.6.2"
