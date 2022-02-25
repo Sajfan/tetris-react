@@ -1,0 +1,69 @@
+{
+  "name": "react-tetris",
+  "version": "1.0.0",
+  "description": "Embed a game of Tetris in your React app",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sajfan/react-tetris"
+  },
+  "dependencies": {
+    "keymaster": "1.6.2"
+  },
+  "scripts": {
+    "build:lib": "rollup --config rollup.lib.js",
+    "build:app": "rollup --config rollup.app.js",
+    "watch": "npm run build:app -- --watch",
+    "build": "npm run clean && npm run build:lib && npm run build:app && npm run html",
+    "html": "cp src/index.html dist/",
+    "lint": "eslint . --ext .ts,.tsx",
+    "clean": "rm -rf dist/*",
+    "test": "tsc --noEmit && npm run lint && npm run test:unit",
+    "test:unit": "esbuild --bundle --platform=node test/index.ts | node"
+  },
+  "author": "Mohamed Sajfan",
+  "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@babel/plugin-external-helpers": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@babel/preset-react": "7.10.1",
+    "@rollup/plugin-replace": "3.0.0",
+    "@rollup/plugin-typescript": "8.2.5",
+    "@types/assert": "1.5.6",
+    "@types/events": "3.0.0",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@types/styled-components": "5.1.15",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "esbuild": "0.13.9",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-jsx-a11y": "6.3.0",
+    "eslint-plugin-react": "7.20.0",
+    "gh-pages": "3.2.3",
+    "prettier": "2.4.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rollup": "2.58.0",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-builtins": "2.1.2",
+    "rollup-plugin-node-globals": "1.4.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "styled-components": "5.3.1",
+    "typescript": "4.4.4",
+    "uglify-js": "3.14.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "files": [
+    "lib/index.js"
+  ]
+}
