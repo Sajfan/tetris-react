@@ -1,6 +1,6 @@
 {
   "name": "tetris-react",
-  "version": "6.0.0",
+  "version": "1.0.0",
   "description": "Game of Tetris in your React app",
   "private": false,
   "main": "lib/index.js",
